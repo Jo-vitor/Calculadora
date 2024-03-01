@@ -1,0 +1,76 @@
+
+body{
+    background-color: rgb(17, 17, 17);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+form {
+    display: grid;
+    grid-template-areas: 
+    "labelV1  inputV1 inputV1 inputV1"
+    "labelV2  inputV2 inputV2 inputV2"
+    "soma subtracao divisao multiplicacao"
+    ;
+    padding: 0 20px;
+    margin-top: 30px;
+    gap: 10px;
+}
+form button{
+    height: 50px;
+    width: 80px;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: rgb(0, 255, 221);
+}
+form input{
+    border-radius: 5px;
+}
+form input:focus{
+    background-color: rgba(0, 255, 221, 0.5);
+}
+
+.div-principal{
+    background-color: rgba(26, 183, 21);
+    height: 56vh;
+    width: 25vw;
+    border: 1px solid white;
+}
+.div-principal h2{
+    margin: 10px;
+}
+.div-principal h3{
+    text-align: center;
+    margin: 40px 0px;
+    font-size: 50px;
+}
+.div-principal h4{
+    margin: 10px;
+}
+
+form :nth-child(1){
+    grid-area: labelV1;
+}
+form :nth-child(2){
+    grid-area: inputV1;
+}
+form :nth-child(3){
+    grid-area: labelV2;
+}
+form :nth-child(4){
+    grid-area: inputV2;
+}
+form :nth-child(5){
+    grid-area: soma;
+}
+form :nth-child(6){
+    grid-area: subtracao;
+}
+form :nth-child(7){
+    grid-area: divisao;
+}
+form :nth-child(8){
+    grid-area: multiplicacao;
+}
