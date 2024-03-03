@@ -2,31 +2,31 @@ package br.vianna.model;
 
 public class Calculadora {
 
-    private int valor1, valor2;
+    private double valor1, valor2;
     private Eoperador operador;
 
     public Calculadora() {
     }
 
-    public Calculadora(int valor1, int valor2, String operador) {
+    public Calculadora(double valor1, double valor2, String operador) {
         this.valor1 = valor1;
         this.valor2 = valor2;
         setOperador(operador);
     }
 
-    public int getValor1() {
+    public double getValor1() {
         return valor1;
     }
 
-    public void setValor1(int valor1) {
+    public void setValor1(double valor1) {
         this.valor1 = valor1;
     }
 
-    public int getValor2() {
+    public double getValor2() {
         return valor2;
     }
 
-    public void setValor2(int valor2) {
+    public void setValor2(double valor2) {
         this.valor2 = valor2;
     }
 
@@ -35,18 +35,18 @@ public class Calculadora {
     }
 
     public void setOperador(String operador) {
-        if(operador.equals("MAIS")){
+        if(operador.equals("+")){
             this.operador = Eoperador.MAIS;
-        } else if(operador.equals("MENOS")){
+        } else if(operador.equals("-")){
             this.operador = Eoperador.MENOS;
-        } else if(operador.equals("DIVISAO")){
+        } else if(operador.equals("/")){
             this.operador = Eoperador.DIVISAO;
         } else {
             this.operador = Eoperador.MULTIPLICACAO;
         }
     }
 
-    public int operacao(){
+    public double operacao(){
         if(operador == Eoperador.MAIS){
             return valor1+valor2;
         } else if(operador == Eoperador.MENOS){
