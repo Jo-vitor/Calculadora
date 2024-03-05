@@ -41,8 +41,10 @@ public class Calculadora {
             this.operador = Eoperador.MENOS;
         } else if(operador.equals("/")){
             this.operador = Eoperador.DIVISAO;
-        } else {
+        } else if(operador.equals("*")){
             this.operador = Eoperador.MULTIPLICACAO;
+        } else{
+            this.operador = Eoperador.MAIS;
         }
     }
 

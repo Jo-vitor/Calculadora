@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
+
 @WebServlet("/ajaxServlet")
 public class ajaxServlet extends HttpServlet {
     @Override
@@ -25,13 +27,13 @@ public class ajaxServlet extends HttpServlet {
         c.setValor2(Integer.parseInt(v2));
         c.setOperador(btn);
 
+        DecimalFormat dc = new DecimalFormat("#,##0.00");
         try {
-            resp.getWriter().print( c.operacao() );
+            resp.getWriter().print( dc.format(c.operacao()) );
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
